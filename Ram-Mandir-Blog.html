@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 60px;
+        }
+       p{
+        font-size: 20px;
+       }
+        body{
+            background-color: #ffc600;
+            color :#ff6c00;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Ram Mandir</h1>
+    <div style="width: 100%;"><center><img src="Ram-Mandir.jpeg" alt="Ram-Mandir"></div>
+    <h2>India's First Solar Explorer</h2>
+    <p style="font-size: 25px;">The Ram Mandir, situated in Ayodhya, India, holds profound significance in the hearts of millions of Hindus worldwide. The temple's history is deeply intertwined with religious, cultural, and political narratives spanning centuries.
+
+        Originally believed to be the birthplace of Lord Ram, the construction of the temple has been a longstanding aspiration for many Hindus. However, its history is marked by controversies and disputes, particularly surrounding the Babri Masjid, a mosque built in the 16th century by Mughal emperor Babur on the same site.
+        
+        The Babri Masjid-Ram Janmabhoomi dispute became a focal point of religious tensions, leading to decades of legal battles and communal strife. In 1992, the mosque was demolished by Hindu activists, triggering widespread violence across India.<br>
+        
+        After years of legal proceedings, the Supreme Court of India finally settled the dispute in 2019, ruling in favor of the construction of a Ram temple at the site while also allocating land for a mosque elsewhere in Ayodhya, aiming to foster communal harmony.
+        
+        The groundbreaking ceremony for the Ram Mandir took place in August 2020, attended by prominent political figures and religious leaders, symbolizing a historic moment of reconciliation and unity for the nation.<br>
+        
+        The architecture of the Ram Mandir reflects a blend of traditional Hindu temple design and contemporary aesthetics, with intricate carvings, towering spires, and expansive courtyards. It serves not only as a place of worship but also as a cultural and spiritual landmark, attracting devotees and tourists from around the world.
+        
+        The completion of the Ram Mandir stands as a testament to the resilience of faith and the power of dialogue in resolving long-standing disputes. It represents a step towards healing the wounds of the past and embracing a future of tolerance, coexistence, and mutual respect.</p>
+
+        <div id="div1" onclick = "click1()"><img width="40px" src="heartSolidLine.jpg" alt="Like"/></div>
+        <div id="div2" onclick = "click1()"><img width="40px" src="heartSolid.jpg" alt="Dislike"/></div>
+        <div id="div3"></div>
+        <script type="text/javascript">
+            setInterval(function () {
+            if(localStorage.getItem("Count")==null)localStorage.setItem("Count",0);
+            if(sessionStorage.getItem("state")==null)sessionStorage.setItem("state","0");
+            if(sessionStorage.getItem("state")=="0")
+            {
+                document.getElementById("div1").hidden=false;
+                document.getElementById("div2").hidden=true;
+            }
+            if(sessionStorage.getItem("state")=="1"){
+                document.getElementById("div1").hidden=true;
+                document.getElementById("div2").hidden=false;
+            }
+            document.getElementById("div3").innerHTML = localStorage.getItem("Count");
+            
+            },0.5);
+            function click1(){
+            var count=Number(localStorage.getItem("Count"));
+            if(sessionStorage.getItem("state")=="0")
+            {
+                sessionStorage.setItem("state","1");
+                count = count + 1;
+            }
+            else {
+                sessionStorage.setItem("state","0");
+                count = count - 1;
+            }
+            localStorage.setItem("Count",count);
+                console.log("clicked");
+            }
+        </script>
+        <h2 style="font-size: 35px;">Comments:</h2>
+        <p>Jai Shree Ram</p>
+        <p>Jai Hanuman</p>
+        <p>Grateful for lawyer </p>
+</body>
+</html>

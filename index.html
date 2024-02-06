@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="content1">
+            <h1> </h1>
+        </div>
+        <div class="content2">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">PallamReddy Viswas Reddy</a></li>
+                <li><a href="#" class="HideonMobile">Home</a></li>
+                <li><a href="#Skills" class="HideonMobile">Skills</a></li>
+                <li><a href="#Blogs" class="HideonMobile">Blogs</a></li>
+                <li><a href="#Education" class="HideonMobile">Education</a></li>
+                <li><a><label id="Dark-Toggle"></label></a></li>
+                <li onclick="ShowSideBar()" class="menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>   
+            <ul class="sidebar">
+                <!-- <li><a href="#" onclick="HideSideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li> -->
+                <li><a href="#" onclick="HideSideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">PallamReddy Viswas Reddy</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Blogs">Blogs</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><label id="Dark-Toggle"></label></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('Dark-Toggle');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+        function ShowSideBar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            document.getElementsByClassName('menu-button')[0].style.display = 'none';
+        }
+        function HideSideBar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            document.getElementsByClassName('menu-button')[0].style.display = 'block';
+        }
+    </script>
+    <div class="info">
+        <div class="profile-image"><img src="WhatsApp Image 2024-02-05 at 20.50.51_c8864fda.jpg" alt="Profile"></div>
+        <div class="personal-info">
+        <div class="name" style="text-align: center;">
+            <h2>This is</h2>
+            <h1>PallamReddy Viswas Reddy</h1>
+        </div>  
+        <div class="accounts-container">
+            <div class="accounts">
+               <div class="Images"><img src="LinkedIn.png"  alt="linkedin-logo" class="social_icons" onclick="location.href='https://www.linkedin.com/in/pallamreddy-naga-venkata-viswas-reddy-5387792b2/'" title="LinkedIn"></div>
+               <div class="Images"><img src="Codeforces.webp"  alt="codeforces logo" class="social_icons" onclick="location.href='https://codeforces.com/profile/Viswas._.Reddy'" title="Codeforces"></div>
+               <div class="Images"><img src="Telegram.png" alt="Telegram-Logo"  class="social_icons" onclick="location.href=''" title="Telegram"></div>
+               <div class="Images"><img src="GitHub.jpeg" alt="Github" class="social_icons"  onclick="location.href='https://github.com/Viswas-Reddy-PallamReddy'"
+                title="GitHub"></div>
+               <div class="Images"><a href="mailto:pallamreddy.viswas@gmail.com" >
+                    <img src="Gmail.jpeg"alt="G-Mail logo" title="G-Mail" class="social_icons" >
+                </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="Education" id="Education">
+        <div>
+            <h1 style="background-color: aqua;width: 100%;text-align: center;padding: 30px;
+            font-size: 75px;text-shadow: 6px 3px 4px red;color:blue;">Educational Info</h1>
+        </div>
+        <div class="IIIT-H">
+            <div class="Description">
+                <h1>IIIT-H</h1>
+                <br>
+                <ul>
+                    <li><p>Entered Through SPEC Mode of Examination</p></li>
+                    <li><p>Qualification to be Completed : B.tech</li>
+                    <li><p>Branch:CSE</p></li>
+                    <li><p>BATCH : UG2K23</p></li>
+                </ul>
+            </div>
+            <div class="Logo">
+                <img src="IIIT-H.jpeg" alt="IIIT-H">
+            </div>
+        </div>
+        <div class="RGUKT">
+            <div class="Description">
+                <h1>RGUKT</h1>
+                <br>
+                <ul>
+                    <li><p>Entered Through RGUKT-CET</p></li>
+                    <li><p>Completed My PUC (Equivalent to Intermediate)</p></li>
+                    <li><p>Branch : PCMB</p></li>
+                    <li><p>Batch : R21</p></li>
+                </ul>
+            </div>
+            <div class="Logo">
+                <img src="RGUKT.jpeg" alt="RGUKT">
+            </div>
+        </div>
+        <div class="VPR">
+            <div class="Description">
+                <h1>VPR Vidya</h1>
+                <br>
+                <ul>
+                    <li><p>Entered Through Entrance Exam By the School Management</p></li>
+                    <li><p>Completed My Secondary Education (Class 6-10)</p></li>
+                    <li><p>Runned by VPR Foundation for poor people</p></li>
+                    <li><p>Offers Daily Lunch and other necessities like Uniforms,Shoes etc.,</p></li>
+                </ul>
+            </div>
+            <div class="Logo">
+                <img src="VPR.png" alt="VPR Vidya">
+            </div>
+        </div>
+        <div class="Rainbow">
+            <div class="Description">
+                <h1>Rainbow School</h1>
+                <br>
+                <ul>
+                    <li><p>First School I joined</p></li>
+                    <li><p>Completed My Primary Education (Class 1-5)</p></li>
+                    <li><p>Good Curriculum and Dedicated Teachers</p></li>
+                    <li><p>Lab Facilities are awesome.<br>
+                    Eg. Octopus in the Biology lab</p></li>
+                </ul>
+            </div>
+            <div class="Logo">
+                <img src="Rainbow_School.jpeg" alt="Rainbow School">
+            </div>
+        </div>
+    </div>
+    <div class="Skills" id="Skills">
+    <div>
+        <h1>My Skills:</h1>
+    </div>
+        <div>
+            <div class="Skill">
+                <img src="C.png" alt="C">
+            </div>
+            <div class="Skill">
+                <img src="CPP.png" alt="C++">
+            </div>
+            <div class="Skill">
+                <img src="Python.png" alt="Python">
+            </div>
+            <div class="Skill">
+                <img src="Latex.png" alt="Latex">
+            </div>
+        </div>
+    </div>
+    <div class="Blogs" id="Blogs">
+        <div>
+            <h1>My Blogs:</h1>
+        </div>
+        <div class="blog-images">
+            <div class="My_Blog">
+                    <img style="animation:shine 5s infinite;" href="Ram-Mandir-Blog.html" src="Ram-Mandir.jpeg" alt="Ram-Mandir">
+            </div>
+                <style>
+                    @keyframes shine{
+                        0%{
+                            box-shadow: 0 0 10px #ffc600, 0 0 20px #ffc600, 0 0 30px #ffc600, 0 0 40px #ffc600;
+                            opacity: 1;
+                        }
+                        50%{
+                            box-shadow: 0 0 20px #ff6c00,0 0 30px #ff6c00, 0 0 40px #ff6c00, 0 0 50px #ff6c00, 0 0 60px #ff6c00;
+                        }
+                        100%{
+                            box-shadow: 0 0 10px #ffc600, 0 0 20px #ffc600, 0 0 30px #ffc600, 0 0 40px #ffc600;
+                            opacity: 1;
+                        }
+                    }
+                </style>
+            <div class="My_Blog">
+                <img src="Adithya-L1.jpeg" href="Adithya-L1-Blog.html" alt="Adithya-L1">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

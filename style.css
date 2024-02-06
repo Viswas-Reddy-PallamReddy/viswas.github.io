@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding :0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: grey ;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+nav ul{
+    width : 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    padding-top:15px;
+    padding-bottom: 15px;
+    /* font-size:20px; */
+}
+
+nav a{
+    height: 100%;
+    font-weight: 1000;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color:blue;
+}
+
+
+nav li:hover{
+    background-color:#f0f0f0;
+}
+
+nav li:first-child{
+    margin-right:auto ;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width : 250px;
+    backdrop-filter: blur(0px); 
+    z-index: 999;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1) ;
+    display: none;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+label{
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border:2px solid;
+    border-radius: 20px;
+}
+label:before{
+    position: absolute;
+    content: '';
+    width:20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    background: yellow;
+    cursor: pointer;
+    transition: 0.4s;
+}
+label.active:before{
+    background: #000;
+    left: 24px;
+    /* background: #fff; */
+}
+body.night{
+    background: rgb(10,10,10);
+    color: #fff;
+}
+
+.sidebar li,a{
+    width: 100%;
+}
+
+.navbar .menu-button{
+    display: none;
+}
+@media (max-width:800px) {
+    .HideonMobile{
+        display: none;
+    }
+    .navbar .menu-button{
+        display: block;
+    }
+    .profile-image img{
+        margin-left: 0;
+        width: 75%;
+        height:100%;
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width :100%;
+    }
+}
+
+.info {
+    padding-top:50px ;
+    height : 90vh;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+}
+
+.info .profile-image {
+    width:50vw;
+    height :100%;
+    justify-content: space-around;
+    padding-left: 25px;
+    padding-top: 50px;
+}
+
+.info .profile-image img {
+    border-radius: 50%;
+    width: 75%;
+    height: 75%;
+    animation: border-color-change 5s infinite;
+}
+
+@keyframes border-color-change { 
+    0% {box-shadow: 0 0 25px red;}
+   25% {box-shadow: 0 0 25px blue;}
+   50% {box-shadow: 0 0 25px green;}
+   75% {box-shadow: 0 0 25px yellow;}
+   100% {box-shadow: 0 0 25px red;}
+} 
+
+.info .personal-info {
+    width:50vw;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info .personal-info .name {    
+    width : 100%;
+    height : 60%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.info .personal-info .name h1 {
+  padding-top: 30px;
+  /* margin: 0 0 10px 0; */
+  font-size: 64px;
+  font-family: "Sofia";
+    text-shadow: 3px 3px 3px #ababab;
+  color: red;
+}
+
+.info .personal-info .name h2 {
+  padding-top: 100px;
+  color:black;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.info .personal-info .accounts-container {
+    width: 100%;
+    display: flex;
+    height: 40%;
+    flex-wrap: wrap;
+}
+
+.info .personal-info .accounts-container .accounts{
+    width: 100%;
+    display: flex;
+    /* justify-content:space-between; */
+}
+
+.info .personal-info .accounts-container .Images{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .personal-info .accounts-container .Images img{
+    height: 25%;
+    border-radius: 50%;
+}
+
+.Education{
+    padding-top: 10px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Education div{
+    width: 100%;
+    display: flex ;
+    justify-content: flex-start;
+}
+
+.Education .Logo{
+    justify-content: center;
+    align-items: center;
+}
+
+.Education .Logo img{
+    height: 100%;
+    
+}
+
+.IIIT-H .Logo img{
+    padding-top: 25px;
+}
+
+.RGUKT .Logo img{
+    padding-top: 30px;
+    height: 70%;
+}
+
+.VPR .Logo img{
+    padding-bottom: 30px;
+    border-radius: 100% ;
+}
+
+
+.Education .Description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    color:rgb(50, 190, 237);
+    background-color: rgb(242, 186, 102);
+}
+
+.Education .Description h1{
+    text-align: center;
+    text-shadow: 3px 3px 2px rgb(19, 195, 60);
+}
+
+.Education .Description:first-child{
+    padding-top: 25px;
+}
+
+.Education .Description:last-child{
+    padding-bottom: 10px;
+}
+
+.Description ul li{
+    color:blue;
+    font-size: large;
+    font-weight: 500;
+}
+
+.Skills{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Skills div{
+    background-color: aqua;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Skills div:first-child{
+    justify-content:flex-start;
+    font-size: 75px;
+    text-shadow: 3px 3px 3px #ababab;
+    animation: text-shadow 5s infinite;
+}
+
+@keyframes text-shadow { 
+    0% {text-shadow: 5px 5px 5px red;}
+   25% {color: blue;text-shadow: 5px 5px 5px red;}
+   50% {text-shadow: 5px 5px 5px green;}
+   75% {color: yellow;text-shadow: 5px 5px 5px red;}
+   100% {text-shadow: 5px 5px 5px red;}
+}
+
+.Skills div:nth-child(2){
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.Blogs{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Blogs div{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}   
+
+.Blogs div:first-child{
+    justify-content: flex-start;
+    font-size: 50px;
+    animation: Heading-Animation 2s infinite;
+}
+
+@keyframes Heading-Animation {
+    0% {text-shadow: 5px 5px 5px orange;}
+   50% {text-shadow: 5px 5px 5px rgb(245, 241, 6);}
+   100% {text-shadow: 5px 5px 5px rgb(245, 127, 9);}
+}
+
+.Blogs div:nth-child(2){
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 25px;
+        }
+        body{
+            background-color: chocolate;
+            color :#f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adithya-L1</h1>
+    <img src="Adithya-L1.jpeg" style="padding: 50px;padding-left: 500px;">
+    <h2>India's First Solar Explorer</h2>
+    <p>The Indian Space Research Organisation (ISRO) launched Aditya L-1, its first space-based mission to study the Sun, from the Satish Dhawan Space Centre in Sriharikota today at 11:50 am. The lift-off took place barely 10 days after ISRO became the first space agency to soft-land a spacecraft near the Moon’s south pole.
+
+        How did the Aditya L-1 mission reach space? Where will it be placed in space? What are its objectives? What payloads it is carrying? And, why does ISRO need to examine the Sun anyway? Here is everything you need to know about ISRO’s Aditya-L1 mission.</p>
+    
+    <p><strong>How did the Aditya L-1 go into space?</strong></p>
+    <p>The solar probe was carried into space by the Polar Satellite Launch Vehicle (PSLV) in ‘XL’ configuration. PSLV is one of the most reliable and versatile workhorse rockets of ISRO. Previous missions like Chandrayaan-1 in 2008 and Mangalyaan in 2013 were also launched using PSLV. The rocket is most powerful in the ‘XL’ configuration as it is equipped with six extended strap-on boosters — they are larger than the boosters of other configurations and, therefore, can carry heavier payloads.</p>
+    <div id="div1" onclick = "click1()"><img width="40px" src="heartSolidLine.jpg" alt="Like"/></div>
+    <div id="div2" onclick = "click1()"><img width="40px" src="heartSolid.jpg" alt="Dislike"/></div>
+    <div id="div3"></div>
+    <script type="text/javascript">
+        setInterval(function () {
+        if(localStorage.getItem("Count")==null)localStorage.setItem("Count",0);
+        if(sessionStorage.getItem("state")==null)sessionStorage.setItem("state","0");
+        if(sessionStorage.getItem("state")=="0")
+        {
+            document.getElementById("div1").hidden=false;
+            document.getElementById("div2").hidden=true;
+        }
+        if(sessionStorage.getItem("state")=="1"){
+            document.getElementById("div1").hidden=true;
+            document.getElementById("div2").hidden=false;
+        }
+        document.getElementById("div3").innerHTML = localStorage.getItem("Count");
+        
+        },0.5);
+        function click1(){
+        var count=Number(localStorage.getItem("Count"));
+        if(sessionStorage.getItem("state")=="0")
+        {
+            sessionStorage.setItem("state","1");
+            count = count + 1;
+        }
+        else {
+            sessionStorage.setItem("state","0");
+            count = count - 1;
+        }
+        localStorage.setItem("Count",count);
+            console.log("clicked");
+        }
+    </script>
+    <h2 style="font-size: 35px;">Comments:</h2>
+    <p>Mera Bharat Mahan</p>
+    <p>My country My pride</p>
+    <p>Proud of being born as an Indian</p>
+</body>
+</html>
